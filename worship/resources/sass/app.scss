@@ -1,0 +1,296 @@
+// Your variable code goes here...
+$include-default-icons: false;
+
+$base-color: #666870;
+
+$button-gradient: 'glossy';
+
+$toolbar-gradient: 'bevel';
+
+$compare-border-color: #cccccc;
+
+
+@import 'sencha-touch/default/all';
+
+
+// these variables are after sencha import because they reference other sencha variables
+
+// make all buttons a little bit taller
+$button-height: $button-height + 0.4;
+
+$product-browse-cost-color: #ed1b24;
+$product-browse-border-color: darken($form-light, 15%);
+$default-button-background-color: #ccc;
+$default-button-glow: #fff;
+$default-button-glow-gradient: radial-gradient(center 75%, ellipse contain, fade-out($default-button-glow, .1), fade-out($default-button-glow, .9));
+$fpx-button-background-color: $list-active-color;
+$fpx-button-glow: lighten($active-color, 50%);
+$fpx-button-glow-gradient: radial-gradient(center 75%, ellipse contain, fade-out($fpx-button-glow, .3), fade-out($fpx-button-glow, 1));
+
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+
+// Your custom code goes here...
+@include pictos-iconmask('arrow_left');
+@include pictos-iconmask('arrow_right');
+@include pictos-iconmask('search');
+@include pictos-iconmask('list');
+@include pictos-iconmask('phone2');
+@include pictos-iconmask('wifi3');
+@include pictos-iconmask('chat');
+@include pictos-iconmask('window');
+@include pictos-iconmask('shield2');
+@include pictos-iconmask('magic');
+@include pictos-iconmask('spaces1');
+@include pictos-iconmask('check2');
+@include pictos-iconmask('check_black2');
+@include pictos-iconmask('empty2');
+@include pictos-iconmask('folder');
+@include pictos-iconmask('info_plain');
+@include pictos-iconmask('info');
+@include pictos-iconmask('add1');
+@include pictos-iconmask('minus2');
+
+.phone-style.portrait {font-size: 14px;}
+.phone-style.landscape {font-size: 18px;}
+.tablet-style.portrait {font-size: 16px;}
+.tablet-style.landscape {font-size: 22px;}
+
+.phone-style .song {font-family: Georgia, serif;}
+.phone-style .song .pattern{display: none;}
+.phone-style .song .extra{display: none;}
+.phone-style .song .chord {display: none;}
+
+.song {
+    /*width: 100%;*/
+    /*-moz-column-count:2; *//* Firefox */
+    /*-webkit-column-count:2; *//* Safari and Chrome */
+    /*column-count:2;*/
+    /*overflow: hidden;*/
+    counter-reset: verse;
+    margin-top: 12pt;
+    //font-size: 14pt;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+	.pattern{
+	    font-family: "Courier New", Courier, monospace;
+	    margin: 1.5em 0 1.5em 0
+	}
+	.extra{
+	    margin: 1.5em 0 1.5em 0;
+	    font-size: .7em;
+	}
+	.verse:before {
+	    counter-increment: verse;
+	    content: counter(verse) ". ";
+	    /* font-size: .5em; */
+	    float: left;
+	    margin-right: .2em;
+	    font-family: Georgia, serif;
+	    font-weight: bold;
+	    font-size: 1.2em;
+	    position: relative;
+	    top: -.3em;
+	}
+	.chorus:before {
+	    content: "Chorus: ";
+	    font-size: .5em;
+	    /* float: left; */
+	}
+	.bridge:before {
+	    content: "Bridge: ";
+	    font-size: .5em;
+	    /* float: left; */
+	}
+	.verse {
+	    margin-top: 1em;
+	    display: block;
+	}
+	.chorus, .bridge, .refrain {
+	    /* margin-top: .5em; */
+	    margin-left: 2em;
+	}
+	sup, sub {
+		height: 0;
+		line-height: 1;
+		vertical-align: baseline;
+		position: relative;
+	    margin-left: .1em;
+	}
+	sup {
+		bottom: 1ex;
+	}
+	sub {
+		top: .5ex;
+	}
+
+}
+
+.bigSong {
+  @extend .song;
+  border-width: 3px;
+}
+
+.tablet-style .song .line {
+    margin-top: .5em;
+    margin-left: .5em;
+}
+
+
+.tablet-style .song .chord {
+    top: -1.5em;
+    position: relative;
+    display: inline-block;
+    font-size: .6em;
+    letter-spacing: -.1em;
+    width: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.songtitle {
+    font-size: .8em;
+    font-family: Georgia, serif;
+}
+
+.nav-list {
+    width: 13.75em;
+    border-right: 1px solid $product-browse-border-color;
+}
+
+.toggle-nav-button {
+    position: relative;
+    left: -.2em;
+    //top: 2.6em;
+    height: 2.7em;
+    width: 1.8em;
+    z-index: 9;
+    border: 1px solid $product-browse-border-color;
+    border-left: 0;
+    @include border-radius(0 .3em .3em 0);
+    background: #ccc;
+    cursor: pointer;
+    @include display-box;
+    @include box-pack(center);
+    @include box-align(center);
+
+    .toggle-nav-icon {
+        display: block;
+        height: 1.35em;
+        width: .45em;
+        -webkit-mask-size: .45em 1.35em;
+        background-color: #7f7f7f;
+    }
+
+    &:hover {
+        @include background-gradient($fpx-button-background-color, 'glossy');
+
+        .toggle-nav-icon {
+            background-color: #fff;
+        }
+    }
+
+    &:active {
+        @include background-gradient($fpx-button-background-color, 'recessed');
+    }
+
+    &.show {
+        //left: 0em;
+
+        .toggle-nav-icon {
+            /*
+            <svg width="8" height="24" xmlns="http://www.w3.org/2000/svg">
+             <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+             <g>
+              <title>Layer 1</title>
+              <polygon id="svg_1" stroke-width="0.5" points="1,1 7,12 1,23" stroke="black" fill="black"/>
+             </g>
+            </svg>
+            */
+            -webkit-mask-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjgiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHA6Ly9zdmctZWRpdC5nb29nbGVjb2RlLmNvbS8gLS0+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMSwxIDcsMTIgMSwyMyIgc3Ryb2tlLXdpZHRoPSIwLjUiIGlkPSJzdmdfMSIvPgogPC9nPgo8L3N2Zz4=');
+        }
+    }
+
+    &.hide {
+        //left: 13.7em;
+
+        .toggle-nav-icon {
+            /*
+            <svg width="8" height="24" xmlns="http://www.w3.org/2000/svg">
+             <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+             <g>
+              <title>Layer 1</title>
+              <polygon id="svg_1" stroke-width="0.5" points="1,12 7,1 7,23" stroke="black" fill="black"/>
+             </g>
+            </svg>
+            */
+            -webkit-mask-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjgiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8IS0tIENyZWF0ZWQgd2l0aCBTVkctZWRpdCAtIGh0dHA6Ly9zdmctZWRpdC5nb29nbGVjb2RlLmNvbS8gLS0+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPHBvbHlnb24gZmlsbD0iYmxhY2siIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMSwxMiA3LDEgNywyMyIgc3Ryb2tlLXdpZHRoPSIwLjUiIGlkPSJzdmdfMSIvPgogPC9nPgo8L3N2Zz4=');
+        }
+    }
+}
+
+@include sencha-button-ui('fpx', $fpx-button-background-color);
+.x-tabbar-dark.x-docked-top {
+    .x-tab-active {
+        @include background-gradient($fpx-button-background-color, 'glossy');
+    }
+}
+
+// retain pressing style on buttons for a half second after they are released
+//  to make it clearer that they were actually hit
+.x-button,.x-toolbar .x-button {
+    @include transition(all .5s step-end);
+    @include box-shadow(none);
+
+    // top half is based on the 'glossy' gradient
+    //  bottom half is based on the 'recessed' gradient
+    //  with radial glow from x-button-pressed class overlaying the bottom half
+    @include background-image($default-button-glow-gradient, linear-gradient(color_stops(lighten($default-button-background-color, 15%), lighten($default-button-background-color, 5%) 25%, $default-button-background-color 26%, darken($default-button-background-color, 5%) 50%, darken($default-button-background-color, 15%) 51%, darken($default-button-background-color, 13%) 56%, darken($default-button-background-color, 8%) 83%, darken($default-button-background-color, 7.5%))));
+    background: {
+        size: 100% 200%;
+        position: center top;
+    }
+
+    &.x-button-pressing {
+        @include transition-duration(0s);
+        @include box-shadow(0 0 .6em .35em #999);
+
+        // top half is based on the 'recessed' gradient
+        //  bottom half is also based on the 'recessed' gradient
+        //  with radial glow from x-button-pressed class overlaying the bottom half
+        @include background-image($default-button-glow-gradient, linear-gradient(color_stops(darken($default-button-background-color, 15%), darken($default-button-background-color, 13%) 5%, darken($default-button-background-color, 8%) 32%, darken($default-button-background-color, 7.5%) 50%, darken($default-button-background-color, 15%) 51%, darken($default-button-background-color, 13%) 56%, darken($default-button-background-color, 8%) 83%, darken($default-button-background-color, 7.5%))));
+        background-position: center bottom;
+        color: #222;
+    }
+
+    &.x-button-fpx {
+        // top half is based on the 'glossy' gradient
+        //  bottom half is based on the 'recessed' gradient
+        //  with radial glow from x-button-pressed class overlaying the bottom half
+        @include background-image($fpx-button-glow-gradient, linear-gradient(color_stops(lighten($fpx-button-background-color, 15%), lighten($fpx-button-background-color, 5%) 25%, $fpx-button-background-color 26%, darken($fpx-button-background-color, 5%) 50%, darken($fpx-button-background-color, 10%) 51%, darken($fpx-button-background-color, 5%) 56%, $fpx-button-background-color 83%, lighten($fpx-button-background-color, .5%))));
+
+        &.x-button-pressing {
+            // top half is based on the 'recessed' gradient
+            //  bottom half is also based on the 'recessed' gradient
+            //  with radial glow from x-button-pressed class overlaying the bottom half
+            @include background-image($fpx-button-glow-gradient, linear-gradient(color_stops(darken($fpx-button-background-color, 10%), darken($fpx-button-background-color, 5%) 5%, $fpx-button-background-color 32%, lighten($fpx-button-background-color, .5%) 50%, darken($fpx-button-background-color, 10%) 51%, darken($fpx-button-background-color, 5%) 56%, $fpx-button-background-color 83%, lighten($fpx-button-background-color, .5%))));
+            color: #eee;
+        }
+    }
+}

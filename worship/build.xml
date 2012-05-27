@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="Worship" default="main" basedir=".">
+    <property name="sdk-path" location="sdk/command"/>
+    <target name="testing" description="meant for QA prior to production. All JavaScript and CSS Files are bundled, but not minified">
+        <delete dir="build/testing" failonerror="false"/>
+    	<exec executable="${sdk-path}/sencha.bat" dir="." failonerror="true" logError="true">
+    		<arg line='app build -e testing'/>
+        </exec>    	
+    </target>
+    <target name="package" description="creates a self-contained, re-distributable production build that normally runs from local file system without the need for a web server">
+        <delete dir="build/package" failonerror="false"/>
+    	<exec executable="${sdk-path}/sencha.bat" dir="." failonerror="true" logError="true">
+    		<arg line='app build -e package'/>
+        </exec>    	
+    </target>
+    <target name="production" description="creates a production build that is normally hosted on a web server and serve multiple clients (devices). The build is offline-capable and has built-in OTA delta updating feature">
+        <delete dir="build/production" failonerror="false"/>
+    	<exec executable="${sdk-path}/sencha.bat" dir="." failonerror="true" logError="true">
+    		<arg line='app build -e production'/>
+        </exec>    	
+    </target>
+    <target name="resolve" description="NOT WORKING! Generate a list of dependencies in the exact loading order for the given application. Note that the resolved paths are relative to the given application's HTML document">
+    	<exec executable="${sdk-path}/sencha.bat" dir="." failonerror="true" logError="true">
+    		<arg line='app resolve -u http://localhost:8080/tod/index.html -o dependencies.json'/>
+        </exec>    	
+    </target>
+    <target name="main" depends="testing" description="Builds testing ">
+    </target>
+</project>
+

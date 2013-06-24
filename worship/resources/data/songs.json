@@ -14,6 +14,7 @@
         {title: 'Come Ye Sinners', fileName: 'ComeYeSinners.html'},
 	    {title: 'For All the Saints', fileName: 'ForAllTheSaints.html'},
 	    {title: 'Give me Jesus', fileName: 'GiveMeJesus.html'},
+	    {title: 'Glorious Things of Thee are Spoken', fileName: 'GloriousThingsOfTheeAreSpoken.html'},
 	    {title: 'God Moves in a Mysterious Way', fileName: 'GodMovesInAMysteriousWay.html'},
 	    //{title: 'Great is Thy Faithfulness', fileName: ''},
 	    //{title: 'Holy, Holy, Holy!', fileName: ''},
@@ -32,7 +33,7 @@
         {title: 'My Anchor Holds', fileName: 'MyAnchorHolds.html'},
         {title: 'O For a Thousand Tongues', fileName: 'OForAThousandTongues.html'},
 	    {title: 'O the Deep, Deep Love of Jesus', fileName: 'OTheDeepDeep.html'},
-	    //{title: 'Pensive, Doubting, Fearful Heart', fileName: ''},
+	    {title: 'Pensive, Doubting, Fearful Heart', fileName: 'PensiveDoubtingFearfulHeart.html'},
         {title: 'Jesus, Lover of my Soul', fileName: 'JesusLoverOfMySoul.html'},
 	    {title: 'Jude Doxology', fileName: 'JudeDocology.html'}
 	    //{title: 'Striken, Smitten, and Afflicted', fileName: ''},

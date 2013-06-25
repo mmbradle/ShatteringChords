@@ -1,5 +1,6 @@
 {
 	data: [
+	    {title: '10,000 Reasons', fileName: '10000reasons.html'},
 	    {title: 'Nothing but the Blood', fileName: 'NothingButTheBlood.html'},
 	    {title: 'Arise, My Soul, Arise', fileName: 'AriseMySoulArise.html'},
 	    {title: 'Be Thou My Vision', fileName: 'BeThouMyVision.html'},

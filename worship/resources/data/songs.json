@@ -20,6 +20,7 @@
 	    //{title: 'Great is Thy Faithfulness', fileName: ''},
 	    //{title: 'Holy, Holy, Holy!', fileName: ''},
 	    {title: 'How Deep the Father\'s Love for Us', fileName:'HowDeepTheFathersLoveForUs.html'},
+	    {title: 'I Need Thee Every Hour', fileName:'INeedTheeEveryHour.html'},
 	    {title: 'In Christ Alone', fileName:'InChristAlone.html'},
 	    {title: 'It is Well with My Soul', fileName:'ItIsWellWithMySoul.html'},
         {title: 'Isaiah 40', fileName: 'Isaiah40.html'},

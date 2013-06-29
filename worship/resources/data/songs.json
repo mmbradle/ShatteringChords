@@ -18,7 +18,7 @@
 	    {title: 'Glorious Things of Thee are Spoken', fileName: 'GloriousThingsOfTheeAreSpoken.html'},
 	    {title: 'God Moves in a Mysterious Way', fileName: 'GodMovesInAMysteriousWay.html'},
 	    //{title: 'Great is Thy Faithfulness', fileName: ''},
-	    //{title: 'Holy, Holy, Holy!', fileName: ''},
+	    {title: 'Holy, Holy, Holy!', fileName: 'HolyHolyHoly.html'},
 	    {title: 'How Deep the Father\'s Love for Us', fileName:'HowDeepTheFathersLoveForUs.html'},
 	    {title: 'I Need Thee Every Hour', fileName:'INeedTheeEveryHour.html'},
 	    {title: 'In Christ Alone', fileName:'InChristAlone.html'},

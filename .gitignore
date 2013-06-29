@@ -1,3 +1,9 @@
+
+worship/.gradle
+worship/.sencha
+worship/archive
+worship/resources/sass/.sass-cache
+
 # http://www.gnu.org/software/automake
 
 Makefile.in

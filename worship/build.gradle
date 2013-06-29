@@ -1,0 +1,47 @@
+defaultTasks 'production'
+ant.importBuild 'build.xml'
+
+configurations {
+    ftpAntTask
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    ftpAntTask("org.apache.ant:ant-commons-net:1.8.4") {
+        module("commons-net:commons-net:1.4.1") {
+            dependencies "oro:oro:2.0.8:jar"
+        }
+    }
+}
+
+task ftp (dependsOn:'production') {
+    doLast {
+        def console = System.console();
+        if (console) {
+            String inputPsswd = new String(console.readPassword('> Please enter your password: '));
+            ant {
+                taskdef(name: 'ftp',
+                        classname: 'org.apache.tools.ant.taskdefs.optional.net.FTP',
+                        classpath: configurations.ftpAntTask.asPath)
+                    ftp(
+                            server: "ftp.shatteringstone.com", 
+                            userid: "mmbradle@shatteringstone.com",
+                            password: inputPsswd,
+                            remotedir: "/worship") {
+                        fileset(dir: "build/production")
+                    }
+            }
+        }
+    }
+}
+
+production {
+    FileTree jsSrcDir = fileTree("app")
+        inputs.files jsSrcDir
+        inputs.files fileTree("resources")
+        outputs.dir file('build/production')
+}
+

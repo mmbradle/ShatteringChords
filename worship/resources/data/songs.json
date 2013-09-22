@@ -20,6 +20,7 @@
 	    //{title: 'Great is Thy Faithfulness', fileName: ''},
 	    {title: 'Holy, Holy, Holy!', fileName: 'HolyHolyHoly.html'},
 	    {title: 'How Deep the Father\'s Love for Us', fileName:'HowDeepTheFathersLoveForUs.html'},
+	    {title: 'How Sweet and Awful', fileName:'HowSweetAndAwful.html'},
 	    {title: 'I Need Thee Every Hour', fileName:'INeedTheeEveryHour.html'},
 	    {title: 'In Christ Alone', fileName:'InChristAlone.html'},
 	    {title: 'It is Well with My Soul', fileName:'ItIsWellWithMySoul.html'},
@@ -41,7 +42,7 @@
 	    {title: 'Striken, Smitten, and Afflicted', fileName: 'StrickenSmittenAndAfflicted.html'},
 	    //{title: 'Sweet Adoration', fileName: ''},
 	    //{title: 'This is My Father\'s World', fileName: ''},
-	    //{title: 'Though Troubles Assail Us', fileName: ''},
+	    {title: 'Though Troubles Assail Us', fileName: 'ThoughTroublesAssailUs.html'},
 	    //{title: 'Trust and Obey', fileName: ''},
 	    {title: 'Thy Mercy My God', fileName: 'ThyMercyMyGod.html'},
 	    {title: 'Whatever My God Ordains is Right', fileName: 'WhateverMyGodOrdains.html'}
